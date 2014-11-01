@@ -1,30 +1,4 @@
-
-var bezier = require('bezier')
-var x = [20, 20, 200, 200]
-var y = [20, 100, 100, 20]
 var adaptive = require('../')
-
-var tmpX = [0, 0, 0, 0]
-var tmpY = [0, 0, 0, 0]
-
-function createBezier(start, c1, c2, end, points) {
-    if (!points)
-        points = []
-
-    tmpX[0] = start[0]
-    tmpX[1] = c1[0]
-    tmpX[2] = c2[0]
-    tmpX[3] = end[0]
-
-    tmpY[0] = start[1]
-    tmpY[1] = c1[1]
-    tmpY[2] = c2[1]
-    tmpY[3] = end[1]
-    for (var t = 0; t < 1; t += 0.01) {
-        points.push([bezier(tmpX, t), bezier(tmpY, t)])
-    }
-    return points
-}
 
 require('canvas-testbed')(function(ctx, width, height) {
     var scale = 2
@@ -47,3 +21,30 @@ require('canvas-testbed')(function(ctx, width, height) {
     })
     ctx.restore()
 })
+
+
+/*
+//This is how a typical (incremental) bezier curve might look
+var bezier = require('bezier')
+var tmpX = [0, 0, 0, 0]
+var tmpY = [0, 0, 0, 0]
+
+function createBezier(start, c1, c2, end, points) {
+    if (!points)
+        points = []
+
+    tmpX[0] = start[0]
+    tmpX[1] = c1[0]
+    tmpX[2] = c2[0]
+    tmpX[3] = end[0]
+
+    tmpY[0] = start[1]
+    tmpY[1] = c1[1]
+    tmpY[2] = c2[1]
+    tmpY[3] = end[1]
+    for (var t = 0; t < 1; t += 0.01) {
+        points.push([bezier(tmpX, t), bezier(tmpY, t)])
+    }
+    return points
+}
+*/

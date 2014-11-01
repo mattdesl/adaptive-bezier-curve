@@ -1,4 +1,4 @@
-function clone(point) {
+function clone(point) { //TODO: use gl-vec2 for this
     return [point[0], point[1]]
 }
 
@@ -17,7 +17,7 @@ module.exports = function createBezierBuilder(opt) {
     var m_angle_tolerance = opt.angleTolerance || 0
     var m_cusp_limit = opt.cuspLimit || 0
 
-    return function create(start, c1, c2, end, scale, points) {
+    return function bezierCurve(start, c1, c2, end, scale, points) {
         if (!points)
             points = []
 

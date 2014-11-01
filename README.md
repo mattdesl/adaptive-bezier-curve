@@ -4,6 +4,8 @@
 
 Builds a bezier curve that is [adaptive](http://antigrain.com/research/adaptive_bezier/); that is to say, it has more points along curved corners, and less points along straight lines. This can be used to produce scalable curves that are consistently smooth, while using a small number of steps.
 
+Also see [adaptive-quadratic-curve](https://nodei.co/npm/adaptive-quadratic-curve/).
+
 ```js
 var bezier = requier('adaptive-bezier-curve')
 

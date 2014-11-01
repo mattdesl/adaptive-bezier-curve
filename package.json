@@ -10,7 +10,6 @@
     "url": "https://github.com/mattdesl"
   },
   "dependencies": {
-    "bezier": "^0.1.0"
   },
   "devDependencies": {
     "canvas-testbed": "^1.0.2",
