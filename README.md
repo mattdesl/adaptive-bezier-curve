@@ -13,7 +13,7 @@ var start = [20, 20],
     end = [200, 20],
     scale = 2
 
-var curve = adaptive(start, c1, c2, end, scale)
+var points = bezier(start, c1, c2, end, scale)
 
 //returns a list of 2d points: [ [x,y], [x,y], [x,y] ... ]
 ```
