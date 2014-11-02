@@ -7,7 +7,7 @@ Builds a bezier curve that is adaptive; that is to say, it has more points along
 Also see [adaptive-quadratic-curve](https://nodei.co/npm/adaptive-quadratic-curve/).
 
 ```js
-var bezier = requier('adaptive-bezier-curve')
+var bezier = require('adaptive-bezier-curve')
 
 var start = [20, 20],
     c1 = [100, 159],
