@@ -1,6 +1,6 @@
 {
   "name": "adaptive-bezier-curve",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "adaptive and scalable 2D bezier curves",
   "main": "index.js",
   "license": "BSD-3-Clause",
